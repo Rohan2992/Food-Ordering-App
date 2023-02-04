@@ -1,41 +1,3 @@
-//jshint esversion: 6
-
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const NavItems = (
-  <ul className="nav">
-    <a href="#">
-      <li>Home</li>
-    </a>
-    <a href="#">
-      <li>About Us</li>
-    </a>
-    <a href="#">
-      <li>Contact Us</li>
-    </a>
-    <a href="#">
-      <li>Cart</li>
-    </a>
-  </ul>
-);
-
-const Header = () => {
-  return (
-    // <img src={require('./logo.png')} alt='Logo.png' />
-    <div className="heading">
-      <a href="/">
-        <img
-          className="logo"
-          src="http://lh3.googleusercontent.com/EbPS9tYwL3H8NkiYJPJbuRHmeIFVUYJs99IdfFT7ea6ZF9sw1Vhw9tiCFVCXqornHGKZyP8sy89up4G-yKqGzoLgPx8"
-          alt="Logo.png"
-        />
-      </a>
-      {NavItems}
-    </div>
-  );
-};
-
 // Configue driven UI
 const configue = [
   {
@@ -71,16 +33,16 @@ const configue = [
 ];
 
 /**  For single restaurant
-  const restaurantList = {
-  imageSrc:
-    "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eywohwrrwky4rqmeyc3f",
-  name: "Burger King",
-  cuisines: ["Italian", "Australian"],
-  rating: 5
-};
- */
+    const restaurantList = {
+    imageSrc:
+      "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eywohwrrwky4rqmeyc3f",
+    name: "Burger King",
+    cuisines: ["Italian", "Australian"],
+    rating: 5
+  };
+   */
 
-const restaurantList = [
+export const restaurantList = [
   {
     info: {
       id: "138202",
@@ -768,75 +730,5 @@ const restaurantList = [
   }
 ];
 
-const RestaurantCard = ({
-  name,
-  cuisines,
-  cloudinaryImageId,
-  avgRatingString
-}) => {
-  // {console.log(props)}
-  // const { name, cuisines, cloudinaryImageId, avgRatingString } =
-  //   restaurant.info;
-  return (
-    <div className="card">
-      <img
-        src={
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-          cloudinaryImageId
-        }
-        alt="img "
-      ></img>
-      <h2>{name}</h2>
-      <h3>{cuisines.join(", ")}</h3>
-      <h4>{avgRatingString}* rating</h4>
-    </div>
-  );
-};
-
-// const RestaurantCard = () => {
-//     return (
-//         <div className='card'>
-//             <img src='https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb' alt='img '></img>
-//             <h2>Burger King</h2>
-//             <h3>Italian, Australian</h3>
-//             <h4>5* rating</h4>
-//         </div>
-//     )
-// }
-
-const Body = () => {
-  const result = [];
-
-  restaurantList.forEach((restaurant) => {
-    // console.log(restaurant);
-    result.push(
-      <RestaurantCard {...restaurant.info} key={restaurant.info.id} />
-    );
-  });
-
-  return (
-    <div className="restaurant-list">
-      {/* {result} */}
-
-      {restaurantList.map((restaurant) => (
-        <RestaurantCard {...restaurant.info} key={restaurant.info.id} />
-      ))}
-
-      {/* <RestaurantCard {...restaurantList[0].info} />
-      <RestaurantCard {...restaurantList[1].info} />
-       */}
-    </div>
-  );
-};
-const Footer = () => <h1>I am Footer</h1>;
-
-const AppLayout = () => (
-  <>
-    <Header />
-    <Body />
-    <Footer />
-  </>
-);
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export const IMG_CDN_URL =
+  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
