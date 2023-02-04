@@ -808,8 +808,10 @@ const Body = () => {
   const result = [];
 
   restaurantList.forEach((restaurant) => {
-    console.log(restaurant);
-    result.push(<RestaurantCard {...restaurant.info} />);
+    // console.log(restaurant);
+    result.push(
+      <RestaurantCard {...restaurant.info} key={restaurant.info.id} />
+    );
   });
 
   return (
@@ -817,7 +819,7 @@ const Body = () => {
       {/* {result} */}
 
       {restaurantList.map((restaurant) => (
-        <RestaurantCard {...restaurant.info} />
+        <RestaurantCard {...restaurant.info} key={restaurant.info.id} />
       ))}
 
       {/* <RestaurantCard {...restaurantList[0].info} />
