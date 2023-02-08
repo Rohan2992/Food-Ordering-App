@@ -19,7 +19,6 @@ const NavItems = (
 
 export default Header = () => {
   return (
-    // <img src={require('./logo.png')} alt='Logo.png' />
     <div className="heading">
       <a href="/">
         <img className="logo" src={logo} alt="Logo.png" />

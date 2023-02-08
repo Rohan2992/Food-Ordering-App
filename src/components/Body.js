@@ -9,45 +9,11 @@ const filterData = (inputText, restaurantList) => {
 };
 
 export default Body = () => {
-  /**
-   * // JS variable
-   * var inputText = "KFC"; ==== const [inputText, setInputText] = setState("KFC");
-   *
-   *  // For Each Loop
-   *  const result = [];
-   *  restaurantList.forEach((restaurant) => {
-   *    // console.log(restaurant);
-   *    result.push(
-   *      <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
-   *    );
-   *  });
-   */
-
   const [inputText, setInputText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-  // Try rendering the components using search-bar
 
   useEffect(() => {
-    /**
-     * // using Promises
-     * fetch(
-      "https://www.swiggy.com/mapi/homepage/getCards?lat=12.9715987&lng=77.5945627"
-    )
-      .then((response) => {
-        response
-          .json()
-          .then((responseData) => {
-            console.log(responseData);
-          })
-          .catch((e) => {
-            console.log(e);
-          });
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-     */
     getRestaurants();
   }, []);
 
@@ -60,7 +26,7 @@ export default Body = () => {
       console.log(json);
       setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
       setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    }, 2000);
+    }, 3000);
   }
 
   return (
@@ -92,15 +58,8 @@ export default Body = () => {
             <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
           ))
         ) : (
-          <>
-            <Shimmer />
-          </>
+          <Shimmer />
         )}
-        {/* {result} */}
-
-        {/* <RestaurantCard {...restaurantList[0].data} />
-        <RestaurantCard {...restaurantList[1].data} />
-         */}
       </div>
     </>
   );
