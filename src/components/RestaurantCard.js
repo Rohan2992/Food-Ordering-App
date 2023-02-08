@@ -4,7 +4,7 @@ export default RestaurantCard = ({
   name,
   cuisines,
   cloudinaryImageId,
-  avgRatingString
+  avgRating
 }) => {
   // {console.log(props)}
   // const { name, cuisines, cloudinaryImageId, avgRatingString } =
@@ -14,7 +14,7 @@ export default RestaurantCard = ({
       <img src={IMG_CDN_URL + cloudinaryImageId} alt="img "></img>
       <h2>{name}</h2>
       <h3>{cuisines.join(", ")}</h3>
-      <h4>{avgRatingString}* rating</h4>
+      <h4>{avgRating}* rating</h4>
     </div>
   );
 };

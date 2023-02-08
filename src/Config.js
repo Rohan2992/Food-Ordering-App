@@ -44,21 +44,40 @@ const configue = [
 
 export const restaurantList = [
   {
-    info: {
-      id: "138202",
-      name: "Food As Mood",
-      cloudinaryImageId: "msqdatxej7qsx7xi8s0x",
-      locality: "Meenakshi Chowk",
-      areaName: "Meenakhshi Chowk",
-      costForTwo: "₹200 for two",
-      cuisines: ["North Indian", "Chinese", "Arabian", "Continental"],
-      avgRating: 3.9,
-      feeDetails: {
-        restaurantId: "138202",
+    data: {
+      id: "325742",
+      name: "Puri Wala",
+      cloudinaryImageId: "keuptchsuxzqi7obcds1",
+      costForTwo: "₹200 FOR TWO",
+      cuisines: ["North Indian", "Thalis", "Snacks", "Street Food"],
+      slaString: "34 MINS",
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
+      },
+      avgRating: "3.2",
+      veg: true,
+      restaurantAvailability: {
+        opened: true
+      },
+      restaurantFeeDetails: {
         fees: [
           {
             name: "BASE_DISTANCE",
-            fee: 1900
+            fee: 3500
           },
           {
             name: "BASE_TIME"
@@ -67,87 +86,166 @@ export const restaurantList = [
             name: "ANCILLARY_SURGE_FEE"
           }
         ],
-        totalFee: 1900
+        totalFees: 3500,
+        title: "Delivery Charge",
+        amount: "3500"
       },
-      parentId: "15975",
-      avgRatingString: "3.9",
-      totalRatingsString: "10K+",
-      promoted: true,
+      badges: {},
+      cta: {
+        link: "swiggy://menu?restaurant_id=325742",
+        text: "RESTAURANT_MENU",
+        type: "DEEPLINK"
+      },
+      areaName: "Greater Noida",
+      lastMileTravelString: "3.5 kms",
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
+      }
+    }
+  },
+  {
+    data: {
+      id: "235728",
+      name: "Chilli Vada Pav",
+      cloudinaryImageId: "ug4abycw5givfeibfyfi",
+      costForTwo: "₹200 FOR TWO",
+      cuisines: ["Maharashtrian", "Snacks", "Beverages"],
+      slaString: "36 MINS",
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
+      },
+      avgRating: "4.2",
+      restaurantAvailability: {
+        opened: true
+      },
+      restaurantFeeDetails: {
+        fees: [
+          {
+            name: "BASE_DISTANCE",
+            fee: 6700
+          },
+          {
+            name: "BASE_TIME"
+          },
+          {
+            name: "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        totalFees: 6700,
+        title: "Delivery Charge",
+        amount: "6700"
+      },
+      badges: {
+        textExtendedBadges: [
+          {
+            iconId: "guiltfree/GF_Logo_android_3x",
+            shortDescription: "options available",
+            fontColor: "#7E808C"
+          }
+        ]
+      },
+      cta: {
+        link: "swiggy://menu?restaurant_id=235728",
+        text: "RESTAURANT_MENU",
+        type: "DEEPLINK"
+      },
+      areaName: "Ghaziabad",
+      lastMileTravelString: "9.6 kms",
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
+      }
+    }
+  },
+  {
+    data: {
+      id: "516337",
+      name: "Samosa Party",
+      cloudinaryImageId: "eywohwrrwky4rqmeyc3f",
+      costForTwo: "₹150 FOR TWO",
+      cuisines: [
+        "Fast Food",
+        "Snacks",
+        "Beverages",
+        "Chaat",
+        "North Indian",
+        "Street Food",
+        "Sweets",
+        "Desserts",
+        "Punjabi",
+        "Bakery"
+      ],
       adTrackingId:
-        "cid=5813937~p=1~eid=00000186-167b-0360-01b8-fe6300b40147~45995",
-      sla: {
-        deliveryTime: 21,
-        lastMileTravel: 1.9,
-        serviceability: "SERVICEABLE",
-        slaString: "21 mins",
-        lastMileTravelString: "1.9 km",
-        iconType: "ICON_TYPE_EMPTY"
+        "cid=5843147~p=2~eid=00000186-2f30-60cf-1c34-90bb00bb022e~45995",
+      slaString: "33 MINS",
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
       },
-      availability: {
-        nextCloseTime: "2023-02-03 23:00:00",
+      avgRating: "3.9",
+      isPromoted: true,
+      restaurantAvailability: {
         opened: true
       },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {},
-          textExtendedBadges: {},
-          textBased: {}
-        }
-      },
-      aggregatedDiscountInfoV3: {
-        header: "50% OFF",
-        subHeader: "UPTO ₹80",
-        discountCalloutInfo: {
-          message: "Free Delivery",
-          logoCtx: {
-            logo: "v1655895371/free_delivery_logo_hqipbo.png"
-          }
-        }
-      },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {}
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {}
-        }
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT"
-    },
-    analytics: {},
-    cta: {
-      link: "swiggy://menu?restaurant_id=138202",
-      text: "RESTAURANT_MENU",
-      type: "DEEPLINK"
-    }
-  },
-  {
-    info: {
-      id: "135629",
-      name: "JCC ( Jain Chat Corner)",
-      cloudinaryImageId: "nbfludp4wmev8xdatzbn",
-      locality: "New Mandi",
-      areaName: "New Mandi",
-      costForTwo: "₹200 for two",
-      cuisines: ["Chaat"],
-      avgRating: 4.1,
-      veg: true,
-      feeDetails: {
-        restaurantId: "135629",
+      restaurantFeeDetails: {
         fees: [
           {
             name: "BASE_DISTANCE",
-            fee: 1900
+            fee: 3000
           },
           {
             name: "BASE_TIME"
@@ -156,83 +254,79 @@ export const restaurantList = [
             name: "ANCILLARY_SURGE_FEE"
           }
         ],
-        totalFee: 1900
+        totalFees: 3000,
+        title: "Delivery Charge",
+        amount: "3000"
       },
-      parentId: "108840",
-      avgRatingString: "4.1",
-      totalRatingsString: "1K+",
-      sla: {
-        deliveryTime: 23,
-        lastMileTravel: 2.8,
-        serviceability: "SERVICEABLE",
-        slaString: "23 mins",
-        lastMileTravelString: "2.8 km",
-        iconType: "ICON_TYPE_EMPTY"
-      },
-      availability: {
-        nextCloseTime: "2023-02-03 22:00:00",
-        opened: true
-      },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          textBased: {},
-          imageBased: {},
-          textExtendedBadges: {}
-        }
-      },
-      aggregatedDiscountInfoV3: {
-        header: "50% OFF",
-        subHeader: "UPTO ₹80",
-        discountCalloutInfo: {
-          message: "Free Delivery",
-          logoCtx: {
-            logo: "v1655895371/free_delivery_logo_hqipbo.png"
+      badges: {
+        textExtendedBadges: [
+          {
+            iconId: "guiltfree/GF_Logo_android_3x",
+            shortDescription: "options available",
+            fontColor: "#7E808C"
           }
-        }
+        ]
       },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {}
+      cta: {
+        link: "swiggy://menu?restaurant_id=516337",
+        text: "RESTAURANT_MENU",
+        type: "DEEPLINK"
       },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {}
-        }
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT"
-    },
-    analytics: {},
-    cta: {
-      link: "swiggy://menu?restaurant_id=135629",
-      text: "RESTAURANT_MENU",
-      type: "DEEPLINK"
+      areaName: "Crossing Republic",
+      lastMileTravelString: "1.9 kms",
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
+      }
     }
   },
   {
-    info: {
-      id: "243535",
-      name: "ROL GOL",
-      cloudinaryImageId: "e63sblh4b25eytr4veyu",
-      locality: "New_Mandi",
-      areaName: "New_Mandi",
-      costForTwo: "₹200 for two",
-      cuisines: ["American", "Fast Food"],
-      avgRating: 3.9,
-      feeDetails: {
-        restaurantId: "243535",
+    data: {
+      id: "454004",
+      name: "MR BHATURA",
+      cloudinaryImageId: "aviquejfszzvqfigfyq0",
+      costForTwo: "₹200 FOR TWO",
+      cuisines: ["Indian", "Beverages"],
+      slaString: "33 MINS",
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
+      },
+      avgRating: "4.2",
+      restaurantAvailability: {
+        opened: true
+      },
+      restaurantFeeDetails: {
         fees: [
           {
             name: "BASE_DISTANCE",
-            fee: 1900
+            fee: 6200
           },
           {
             name: "BASE_TIME"
@@ -241,166 +335,159 @@ export const restaurantList = [
             name: "ANCILLARY_SURGE_FEE"
           }
         ],
-        totalFee: 1900
-      },
-      parentId: "170654",
-      avgRatingString: "3.9",
-      totalRatingsString: "1K+",
-      sla: {
-        deliveryTime: 28,
-        lastMileTravel: 4.4,
-        serviceability: "SERVICEABLE",
-        slaString: "28 mins",
-        lastMileTravelString: "4.4 km",
-        iconType: "ICON_TYPE_EMPTY"
-      },
-      availability: {
-        nextCloseTime: "2023-02-03 23:00:00",
-        opened: true
+        totalFees: 6200,
+        title: "Delivery Charge",
+        amount: "6200"
       },
       badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          textBased: {},
-          imageBased: {},
-          textExtendedBadges: {}
-        }
+      cta: {
+        link: "swiggy://menu?restaurant_id=454004",
+        text: "RESTAURANT_MENU",
+        type: "DEEPLINK"
       },
-      aggregatedDiscountInfoV3: {
+      areaName: "Sector 72",
+      lastMileTravelString: "8.8 kms",
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
+      }
+    }
+  },
+  {
+    data: {
+      id: "531070",
+      name: "Gol vada pav no 1",
+      cloudinaryImageId: "gcc4dkeya7whyxgp7xst",
+      costForTwo: "₹200 FOR TWO",
+      cuisines: ["Street Food", "Snacks"],
+      slaString: "36 MINS",
+      aggregatedDiscountInfo: {
+        header: "60% off",
+        shortDescriptionList: [
+          {
+            meta: "60% off | Use TRYNEW",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "60% off up to ₹120 | Use code TRYNEW",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
+      },
+      avgRating: "4.3",
+      restaurantAvailability: {
+        opened: true
+      },
+      restaurantFeeDetails: {
+        fees: [
+          {
+            name: "BASE_DISTANCE",
+            fee: 6700
+          },
+          {
+            name: "BASE_TIME"
+          },
+          {
+            name: "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        totalFees: 6700,
+        title: "Delivery Charge",
+        amount: "6700"
+      },
+      badges: {
+        textExtendedBadges: [
+          {
+            iconId: "guiltfree/GF_Logo_android_3x",
+            shortDescription: "options available",
+            fontColor: "#7E808C"
+          }
+        ]
+      },
+      cta: {
+        link: "swiggy://menu?restaurant_id=531070",
+        text: "RESTAURANT_MENU",
+        type: "DEEPLINK"
+      },
+      areaName: "Ghaziabad",
+      lastMileTravelString: "9.6 kms",
+      aggregatedDiscountInfoV2: {
         header: "60% OFF",
-        subHeader: "UPTO ₹120",
-        discountCalloutInfo: {
-          message: "Free Delivery",
-          logoCtx: {
-            logo: "v1655895371/free_delivery_logo_hqipbo.png"
+        shortDescriptionList: [
+          {
+            meta: "Use TRYNEW",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
           }
-        }
-      },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {}
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {}
-        }
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT"
-    },
-    analytics: {},
-    cta: {
-      link: "swiggy://menu?restaurant_id=243535",
-      text: "RESTAURANT_MENU",
-      type: "DEEPLINK"
+        ],
+        descriptionList: [
+          {
+            meta: "60% off up to ₹120 | Use code TRYNEW",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
+      }
     }
   },
   {
-    info: {
-      id: "359854",
-      name: "PRADEEP SWEETS",
-      cloudinaryImageId: "dgsrowncxiwmu4fikuzw",
-      locality: "New_Mandi",
-      areaName: "railway road main gate",
-      costForTwo: "₹250 for two",
-      cuisines: ["Desserts", "Beverages"],
-      feeDetails: {
-        restaurantId: "359854",
-        fees: [
+    data: {
+      id: "623615",
+      name: "EatFit",
+      cloudinaryImageId: "b690685198b90802f8771d78c3a38a5e",
+      costForTwo: "₹270 FOR TWO",
+      cuisines: [
+        "Healthy Food",
+        "Pizzas",
+        "North Indian",
+        "Thalis",
+        "Biryani",
+        "Chinese"
+      ],
+      slaString: "30-40 MINS",
+      aggregatedDiscountInfo: {
+        header: "FLAT125 off",
+        shortDescriptionList: [
           {
-            name: "BASE_DISTANCE",
-            fee: 1900
-          },
-          {
-            name: "BASE_TIME"
-          },
-          {
-            name: "ANCILLARY_SURGE_FEE"
+            meta: "FLAT125 off | Use FLATDEAL",
+            discountType: "Flat",
+            operationType: "RESTAURANT"
           }
         ],
-        totalFee: 1900
+        descriptionList: [
+          {
+            meta: "FLAT125 off | Use FLATDEAL",
+            discountType: "Flat",
+            operationType: "RESTAURANT"
+          }
+        ]
       },
-      parentId: "160362",
-      avgRatingString: "--",
-      sla: {
-        deliveryTime: 32,
-        lastMileTravel: 1.4,
-        serviceability: "SERVICEABLE",
-        slaString: "32 mins",
-        lastMileTravelString: "1.4 km",
-        iconType: "ICON_TYPE_EMPTY"
-      },
-      availability: {
-        nextCloseTime: "2023-02-03 22:00:00",
+      avgRating: "4.1",
+      restaurantAvailability: {
         opened: true
       },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {},
-          textExtendedBadges: {},
-          textBased: {}
-        }
-      },
-      aggregatedDiscountInfoV3: {
-        header: "50% OFF",
-        subHeader: "UPTO ₹80",
-        discountCalloutInfo: {
-          message: "Free Delivery",
-          logoCtx: {
-            logo: "v1655895371/free_delivery_logo_hqipbo.png"
-          }
-        }
-      },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {}
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {}
-        }
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT"
-    },
-    analytics: {},
-    cta: {
-      link: "swiggy://menu?restaurant_id=359854",
-      text: "RESTAURANT_MENU",
-      type: "DEEPLINK"
-    }
-  },
-  {
-    info: {
-      id: "238539",
-      name: "New Yadgar Restaurant",
-      cloudinaryImageId: "sruj73mc6emxd6r19sto",
-      locality: "New_Mandi",
-      areaName: "Khalapar",
-      costForTwo: "₹150 for two",
-      cuisines: ["Mughlai"],
-      avgRating: 4.2,
-      feeDetails: {
-        restaurantId: "238539",
+      restaurantFeeDetails: {
         fees: [
           {
             name: "BASE_DISTANCE",
-            fee: 1900
+            fee: 3000
           },
           {
             name: "BASE_TIME"
@@ -409,86 +496,82 @@ export const restaurantList = [
             name: "ANCILLARY_SURGE_FEE"
           }
         ],
-        totalFee: 1900
+        totalFees: 3000,
+        title: "Delivery Charge",
+        amount: "3000"
       },
-      parentId: "148383",
-      avgRatingString: "4.2",
-      totalRatingsString: "1K+",
-      promoted: true,
+      badges: {
+        textExtendedBadges: [
+          {
+            iconId: "guiltfree/GF_Logo_android_3x",
+            shortDescription: "brand",
+            fontColor: "#7E808C"
+          }
+        ]
+      },
+      cta: {
+        link: "swiggy://menu?restaurant_id=623615",
+        text: "RESTAURANT_MENU",
+        type: "DEEPLINK"
+      },
+      areaName: "Shaberi",
+      lastMileTravelString: "2.3 kms",
+      aggregatedDiscountInfoV2: {
+        header: "₹125 OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use FLATDEAL",
+            discountType: "Flat",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "FLAT125 off | Use FLATDEAL",
+            discountType: "Flat",
+            operationType: "RESTAURANT"
+          }
+        ]
+      }
+    }
+  },
+  {
+    data: {
+      id: "338756",
+      name: "CRUST & CRISPY SANDWICH",
+      cloudinaryImageId: "sqtrjrjosfuizck7xfrr",
+      costForTwo: "₹120 FOR TWO",
+      cuisines: ["Snacks"],
       adTrackingId:
-        "cid=5814308~p=2~eid=00000186-167b-0360-01b8-fe6400b40267~45995",
-      sla: {
-        deliveryTime: 20,
-        lastMileTravel: 1.9,
-        serviceability: "SERVICEABLE",
-        slaString: "20 mins",
-        lastMileTravelString: "1.9 km",
-        iconType: "ICON_TYPE_EMPTY"
+        "cid=5772722~p=5~eid=00000186-2f30-60cf-1c34-90be00bb056f~45995",
+      slaString: "40-50 MINS",
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
       },
-      availability: {
-        nextCloseTime: "2023-02-03 23:01:00",
+      avgRating: "4.4",
+      isPromoted: true,
+      restaurantAvailability: {
         opened: true
       },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          textBased: {},
-          imageBased: {},
-          textExtendedBadges: {}
-        }
-      },
-      aggregatedDiscountInfoV3: {
-        header: "60% OFF",
-        subHeader: "UPTO ₹120",
-        discountCalloutInfo: {
-          message: "Free Delivery",
-          logoCtx: {
-            logo: "v1655895371/free_delivery_logo_hqipbo.png"
-          }
-        }
-      },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {}
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {}
-        }
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT"
-    },
-    analytics: {},
-    cta: {
-      link: "swiggy://menu?restaurant_id=238539",
-      text: "RESTAURANT_MENU",
-      type: "DEEPLINK"
-    }
-  },
-  {
-    info: {
-      id: "565607",
-      name: "AL-BAIK.COM",
-      cloudinaryImageId: "ega2f6gz0ttaxxnbsn1w",
-      locality: "New_Mandi",
-      areaName: "MEENAKSHI CHOWK",
-      costForTwo: "₹250 for two",
-      cuisines: ["Snacks"],
-      avgRating: 3.3,
-      feeDetails: {
-        restaurantId: "565607",
+      restaurantFeeDetails: {
         fees: [
           {
             name: "BASE_DISTANCE",
-            fee: 1900
+            fee: 4000
           },
           {
             name: "BASE_TIME"
@@ -497,83 +580,80 @@ export const restaurantList = [
             name: "ANCILLARY_SURGE_FEE"
           }
         ],
-        totalFee: 1900
+        totalFees: 4000,
+        title: "Delivery Charge",
+        amount: "4000"
       },
-      parentId: "6315",
-      avgRatingString: "3.3",
-      totalRatingsString: "20+",
-      sla: {
-        deliveryTime: 23,
-        lastMileTravel: 1.9,
-        serviceability: "SERVICEABLE",
-        slaString: "23 mins",
-        lastMileTravelString: "1.9 km",
-        iconType: "ICON_TYPE_EMPTY"
-      },
-      availability: {
-        nextCloseTime: "2023-02-03 23:30:00",
-        opened: true
-      },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          textBased: {},
-          imageBased: {},
-          textExtendedBadges: {}
-        }
-      },
-      aggregatedDiscountInfoV3: {
-        header: "50% OFF",
-        subHeader: "UPTO ₹80",
-        discountCalloutInfo: {
-          message: "Free Delivery",
-          logoCtx: {
-            logo: "v1655895371/free_delivery_logo_hqipbo.png"
+      badges: {
+        textExtendedBadges: [
+          {
+            iconId: "guiltfree/GF_Logo_android_3x",
+            shortDescription: "options available",
+            fontColor: "#7E808C"
           }
-        }
+        ]
       },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {}
+      cta: {
+        link: "swiggy://menu?restaurant_id=338756",
+        text: "RESTAURANT_MENU",
+        type: "DEEPLINK"
       },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {}
-        }
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT"
-    },
-    analytics: {},
-    cta: {
-      link: "swiggy://menu?restaurant_id=565607",
-      text: "RESTAURANT_MENU",
-      type: "DEEPLINK"
+      areaName: "Crossing republic",
+      lastMileTravelString: "4.8 kms",
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
+      }
     }
   },
   {
-    info: {
-      id: "613951",
-      name: "Kwality Walls",
-      cloudinaryImageId: "ltsqzrzmc94lnujgrfpq",
-      locality: "New Mandi",
-      areaName: "Muzaffarnagar",
-      costForTwo: "₹200 for two",
-      cuisines: ["Desserts", "Ice Cream", "Ice Cream Cakes"],
+    data: {
+      id: "467224",
+      name: "Keventers - Milkshakes & Desserts",
+      cloudinaryImageId: "beb5cae2995c6a06ede74bd520de83b2",
+      costForTwo: "₹200 FOR TWO",
+      cuisines: ["Beverages", "Ice Cream", "Desserts", "Healthy Food"],
+      slaString: "30-40 MINS",
+      aggregatedDiscountInfo: {
+        header: "40% off",
+        shortDescriptionList: [
+          {
+            meta: "40% off | Use SPECIALS",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ],
+        descriptionList: [
+          {
+            meta: "40% off up to ₹80 on select items | Use code SPECIALS",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
+          }
+        ]
+      },
+      avgRating: "4.0",
       veg: true,
-      feeDetails: {
-        restaurantId: "613951",
+      restaurantAvailability: {
+        opened: true
+      },
+      restaurantFeeDetails: {
         fees: [
           {
             name: "BASE_DISTANCE",
-            fee: 1900
+            fee: 4000
           },
           {
             name: "BASE_TIME"
@@ -582,150 +662,35 @@ export const restaurantList = [
             name: "ANCILLARY_SURGE_FEE"
           }
         ],
-        totalFee: 1900
-      },
-      parentId: "582",
-      avgRatingString: "--",
-      sla: {
-        deliveryTime: 20,
-        lastMileTravel: 1.5,
-        serviceability: "SERVICEABLE",
-        slaString: "20 mins",
-        lastMileTravelString: "1.5 km",
-        iconType: "ICON_TYPE_EMPTY"
-      },
-      availability: {
-        nextCloseTime: "2023-02-03 20:30:00",
-        opened: true
+        totalFees: 4000,
+        title: "Delivery Charge",
+        amount: "4000"
       },
       badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {},
-          textExtendedBadges: {},
-          textBased: {}
-        }
+      cta: {
+        link: "swiggy://menu?restaurant_id=467224",
+        text: "RESTAURANT_MENU",
+        type: "DEEPLINK"
       },
-      aggregatedDiscountInfoV3: {
-        header: "50% OFF",
-        subHeader: "UPTO ₹80",
-        discountCalloutInfo: {
-          message: "Free Delivery",
-          logoCtx: {
-            logo: "v1655895371/free_delivery_logo_hqipbo.png"
-          }
-        }
-      },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {}
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {}
-        }
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT"
-    },
-    analytics: {},
-    cta: {
-      link: "swiggy://menu?restaurant_id=613951",
-      text: "RESTAURANT_MENU",
-      type: "DEEPLINK"
-    }
-  },
-  {
-    info: {
-      id: "249399",
-      name: "Swad",
-      cloudinaryImageId: "ws5q5sivdpcqniqrlgdf",
-      locality: "New_Mandi",
-      areaName: "Jila Parisad Colony",
-      costForTwo: "₹100 for two",
-      cuisines: ["Snacks"],
-      avgRating: 3.3,
-      veg: true,
-      feeDetails: {
-        restaurantId: "249399",
-        fees: [
+      areaName: "Gaur city 2",
+      lastMileTravelString: "4 kms",
+      aggregatedDiscountInfoV2: {
+        header: "40% OFF",
+        shortDescriptionList: [
           {
-            name: "BASE_DISTANCE",
-            fee: 1900
-          },
-          {
-            name: "BASE_TIME"
-          },
-          {
-            name: "ANCILLARY_SURGE_FEE"
+            meta: "Use SPECIALS",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
           }
         ],
-        totalFee: 1900
-      },
-      parentId: "4297",
-      avgRatingString: "3.3",
-      totalRatingsString: "20+",
-      sla: {
-        deliveryTime: 27,
-        lastMileTravel: 2.5,
-        serviceability: "SERVICEABLE",
-        slaString: "27 mins",
-        lastMileTravelString: "2.5 km",
-        iconType: "ICON_TYPE_EMPTY"
-      },
-      availability: {
-        nextCloseTime: "2023-02-03 17:00:00",
-        opened: true
-      },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {},
-          textExtendedBadges: {},
-          textBased: {}
-        }
-      },
-      aggregatedDiscountInfoV3: {
-        header: "50% OFF",
-        subHeader: "UPTO ₹80",
-        discountCalloutInfo: {
-          message: "Free Delivery",
-          logoCtx: {
-            logo: "v1655895371/free_delivery_logo_hqipbo.png"
+        descriptionList: [
+          {
+            meta: "40% off up to ₹80 on select items | Use code SPECIALS",
+            discountType: "Percentage",
+            operationType: "RESTAURANT"
           }
-        }
-      },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {}
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {}
-        }
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT"
-    },
-    analytics: {},
-    cta: {
-      link: "swiggy://menu?restaurant_id=249399",
-      text: "RESTAURANT_MENU",
-      type: "DEEPLINK"
+        ]
+      }
     }
   }
 ];

@@ -1,12 +1,12 @@
-import { useState } from "react";
-import { restaurantList } from "../Config";
+import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
 
-function filterData(inputText, restaurantList) {
+const filterData = (inputText, restaurantList) => {
   return restaurantList.filter((restaurant) => {
-    return restaurant.info.name.includes(inputText);
+    return restaurant.data.name.includes(inputText);
   });
-}
+};
 
 export default Body = () => {
   /**
@@ -18,15 +18,50 @@ export default Body = () => {
    *  restaurantList.forEach((restaurant) => {
    *    // console.log(restaurant);
    *    result.push(
-   *      <RestaurantCard {...restaurant.info} key={restaurant.info.id} />
+   *      <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
    *    );
    *  });
    */
 
   const [inputText, setInputText] = useState("");
-  const [restaurants, setrestaurants] = useState(restaurantList);
+  const [restaurants, setRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  // Try rendering the components using search-bar
 
-  const [searchClicked, setSearchClicked] = useState(false);
+  useEffect(() => {
+    /**
+     * // using Promises
+     * fetch(
+      "https://www.swiggy.com/mapi/homepage/getCards?lat=12.9715987&lng=77.5945627"
+    )
+      .then((response) => {
+        response
+          .json()
+          .then((responseData) => {
+            console.log(responseData);
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+     */
+    getRestaurants();
+  }, []);
+
+  async function getRestaurants() {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=29.4545144&lng=77.70085089999999&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    setTimeout(() => {
+      console.log(json);
+      setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+      setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    }, 2000);
+  }
 
   return (
     <>
@@ -42,23 +77,29 @@ export default Body = () => {
         <button
           className="search-btn"
           onClick={() => {
-            const data = filterData(inputText, restaurantList);
-            setrestaurants(data);
+            const data = filterData(inputText, restaurants);
+            setFilteredRestaurants(data);
+            console.log(data);
           }}
         >
           Search
         </button>
       </div>
-      <h1>{searchClicked}</h1>
+
       <div className="restaurant-list">
+        {filteredRestaurants.length > 0 ? (
+          filteredRestaurants.map((restaurant) => (
+            <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+          ))
+        ) : (
+          <>
+            <Shimmer />
+          </>
+        )}
         {/* {result} */}
 
-        {restaurants.map((restaurant) => (
-          <RestaurantCard {...restaurant.info} key={restaurant.info.id} />
-        ))}
-
-        {/* <RestaurantCard {...restaurantList[0].info} />
-        <RestaurantCard {...restaurantList[1].info} />
+        {/* <RestaurantCard {...restaurantList[0].data} />
+        <RestaurantCard {...restaurantList[1].data} />
          */}
       </div>
     </>
