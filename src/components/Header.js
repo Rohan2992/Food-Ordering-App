@@ -1,3 +1,4 @@
+import { useState } from "react";
 import logo from "../../logo.png";
 
 const NavItems = (
@@ -18,12 +19,30 @@ const NavItems = (
 );
 
 export default Header = () => {
+  const [authenticateUser, setAuthenticateUser] = useState(false);
   return (
     <div className="heading">
       <a href="/">
         <img className="logo" src={logo} alt="Logo.png" />
       </a>
       {NavItems}
+      {authenticateUser ? (
+        <button
+          onClick={() => {
+            setAuthenticateUser(false);
+          }}
+        >
+          Login
+        </button>
+      ) : (
+        <button
+          onClick={() => {
+            setAuthenticateUser(true);
+          }}
+        >
+          LogOut
+        </button>
+      )}
     </div>
   );
 };
