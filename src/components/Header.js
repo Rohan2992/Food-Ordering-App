@@ -1,20 +1,21 @@
 import { useState } from "react";
 import logo from "../../logo.png";
+import { Link } from "react-router-dom";
 
 const NavItems = (
   <ul className="nav">
-    <a href="#">
+    <Link to="/">
       <li>Home</li>
-    </a>
-    <a href="#">
+    </Link>
+    <Link to="/about">
       <li>About Us</li>
-    </a>
-    <a href="#">
+    </Link>
+    <Link to="/contact">
       <li>Contact Us</li>
-    </a>
-    <a href="#">
+    </Link>
+    <Link to="#">
       <li>Cart</li>
-    </a>
+    </Link>
   </ul>
 );
 

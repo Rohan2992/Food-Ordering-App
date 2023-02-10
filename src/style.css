@@ -49,7 +49,7 @@ a {
 }
 
 .shimmer-img,
-.card > img {
+.card img {
   width: 100%;
   padding: 5px;
   margin: 20px 0px;
@@ -60,20 +60,17 @@ a {
   margin: 30px;
 }
 
-.shimmer {
-  width: 260px;
-  height: 350px;
-  border: 2px solid #000;
-  text-align: center;
-  margin: 5px;
-}
-
-.shimmer-card > h2 {
+.shimmer-card h2 {
   margin-top: 60px;
 }
-.shimmer-card > h3 {
+.shimmer-card h3 {
   margin-top: 20px;
 }
-.shimmer-card > h4 {
+.shimmer-card h4 {
   margin-top: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
 }
