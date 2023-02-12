@@ -11,9 +11,11 @@ export default RestaurantCard = ({
   return (
     <div className="card">
       <img src={IMG_CDN_URL + cloudinaryImageId} alt="img " />
-      <Link to={"/restaurant/" + id}>
-        <h2>{name}</h2>
-      </Link>
+
+      <h2>
+        <Link to={"/restaurant/" + id}>{name} </Link>
+      </h2>
+
       <h3>{cuisines.join(", ")}</h3>
       <h4>{avgRating}* rating</h4>
     </div>
