@@ -4,6 +4,7 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      count: 0,
       userInfo: {
         name: "Dummy Name",
         location: "Dummy Location"
@@ -49,9 +50,16 @@ class Profile extends React.Component {
         <h1>Profile Class Based Component</h1>
         <p>I am the class Based Component of the Food Villa</p>
         {console.log(this.state)}
+
         <h3>{this?.state?.userInfo?.name}</h3>
         <h4>{this?.state?.userInfo?.location}</h4>
-        <img src="" />
+        <button
+          onClick={() => {
+            this.setState({ count: this.state.count + 1 });
+          }}
+        >
+          Click
+        </button>
         {/* <p>{this.state.count}</p>
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>
           Count
