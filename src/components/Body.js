@@ -1,28 +1,20 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-
-const filterData = (inputText, restaurantList) => {
-  return restaurantList.filter((restaurant) => {
-    return restaurant?.data?.name
-      ?.toLowerCase()
-      ?.includes(inputText.toLowerCase());
-  });
-};
+import { filterData } from "../utils/helper";
+import useOnline from "../utils/useOnline";
+import Offline from "./Offline";
+import { DATA_FETCH_URL } from "../Config";
 
 export default Body = () => {
   const [inputText, setInputText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([""]);
-
   useEffect(() => {
     getRestaurants();
   }, []);
-
   async function getRestaurants() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6320535&lng=77.44581509999999&page_type=DESKTOP_WEB_LISTING"
-    );
+    const data = await fetch(DATA_FETCH_URL);
     const json = await data.json();
     setTimeout(() => {
       // console.log(json);
@@ -30,8 +22,13 @@ export default Body = () => {
       setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     }, 3000);
   }
-
+  const status = useOnline();
+  // console.log(status);
   //  Early return
+
+  if (!status) {
+    return <Offline />;
+  }
   if (!restaurants) return null;
 
   if (filteredRestaurants.length === 0) {

@@ -1,5 +1,5 @@
 const Contact = () => {
-  return <div>I am the Header Component...</div>;
+  return <div>I am the Contact Component...</div>;
 };
 
 export default Contact;

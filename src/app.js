@@ -1,6 +1,6 @@
 //jshint esversion: 6
 
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -12,6 +12,10 @@ import Profile from "./components/Profile";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
+// import Instamart from "./components/Instamart";
+
+//lazy loading
+const Instamart = lazy(() => import("./components/Instamart"));
 
 const AppLayout = () => (
   <>
@@ -37,6 +41,14 @@ const createRoute = createBrowserRouter([
         element: <About />,
         children: [{ path: "profile", element: <Profile /> }]
         // children: [{ path: "profile", element: <Profile name="rohan" /> }]
+      },
+      {
+        path: "/instamart",
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Instamart />
+          </Suspense>
+        )
       },
       {
         path: "/restaurant/:id",
