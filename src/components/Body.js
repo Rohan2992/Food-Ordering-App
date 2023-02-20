@@ -6,7 +6,7 @@ import useOnline from "../utils/useOnline";
 import Offline from "./Offline";
 import { DATA_FETCH_URL } from "../Config";
 
-export default Body = () => {
+const Body = () => {
   const [inputText, setInputText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([""]);
@@ -67,3 +67,5 @@ export default Body = () => {
     </>
   );
 };
+
+export default Body;

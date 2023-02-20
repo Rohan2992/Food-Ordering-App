@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { IMG_CDN_URL } from "../Config";
 
-export default RestaurantCard = ({
+const RestaurantCard = ({
   name,
   cuisines,
   cloudinaryImageId,
@@ -21,3 +21,5 @@ export default RestaurantCard = ({
     </div>
   );
 };
+
+export default RestaurantCard;

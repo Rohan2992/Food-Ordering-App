@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 
-export default Header = () => {
+const Header = () => {
   const [authenticateUser, setAuthenticateUser] = useState(false);
   const status = useOnline();
 
@@ -55,3 +55,5 @@ export default Header = () => {
     </div>
   );
 };
+
+export default Header;

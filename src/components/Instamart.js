@@ -1,4 +1,4 @@
-export default Instamart = () => {
+const Instamart = () => {
   return (
     <div>
       <h1>INSTAMART</h1>
@@ -6,3 +6,5 @@ export default Instamart = () => {
     </div>
   );
 };
+
+export default Instamart;

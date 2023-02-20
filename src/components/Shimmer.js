@@ -1,7 +1,7 @@
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-export default Shimmer = () => {
+const Shimmer = () => {
   return (
     <SkeletonTheme highlightColor="#fff">
       <div className="search-bar">
@@ -34,3 +34,4 @@ export default Shimmer = () => {
     </SkeletonTheme>
   );
 };
+export default Shimmer;
