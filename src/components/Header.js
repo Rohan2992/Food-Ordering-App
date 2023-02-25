@@ -8,31 +8,31 @@ const Header = () => {
   const status = useOnline();
 
   const NavItems = (
-    <ul className="nav">
+    <ul className="sm:flex flex-wrap block  ">
       <Link to="/">
-        <li>Home</li>
+        <li className="m-2 p-1">Home</li>
       </Link>
       <Link to="/about">
-        <li>About Us</li>
+        <li className="m-2 p-1">About Us</li>
       </Link>
       <Link to="/contact">
-        <li>Contact Us</li>
+        <li className="m-2 p-1">Contact Us</li>
       </Link>
       <Link to="#">
-        <li>Cart</li>
+        <li className="m-2 p-1">Cart</li>
       </Link>
       <Link to="/instamart">
-        <li>Instamart</li>
+        <li className="m-2 p-1">Instamart</li>
       </Link>
       <Link>
-        <li>{status ? "✅" : "📴"}</li>
+        <li className="m-2 p-1">{status ? "✅" : "📴"}</li>
       </Link>
     </ul>
   );
   return (
-    <div className="heading">
+    <div className="flex justify-between items-center flex-wrap sm:flex sm:justify-between sm:items-center p-3 bg-yellow-400">
       <a href="/">
-        <img className="logo" src={logo} alt="Logo.png" />
+        <img className="w-20 h-20" src={logo} alt="Logo.png" />
       </a>
       {NavItems}
       {authenticateUser ? (

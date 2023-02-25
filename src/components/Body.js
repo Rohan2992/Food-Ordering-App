@@ -39,17 +39,17 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="search-bar">
+      <div className="flex justify-center my-3">
         <input
           type="text"
-          className="search-input"
+          className="bg-yellow-200 p-2"
           placeholder="Search"
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
 
         <button
-          className="search-btn"
+          className="mx-5 bg-yellow-400 text-black hover:bg-yellow-200 p-2 rounded-md"
           onClick={() => {
             const data = filterData(inputText, restaurants);
             setFilteredRestaurants(data);
@@ -59,7 +59,7 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="restaurant-list">
+      <div className="flex flex-wrap justify-center">
         {filteredRestaurants.map((restaurant) => (
           <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
         ))}
