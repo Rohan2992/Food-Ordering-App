@@ -1,4 +1,5 @@
 import React from "react";
+import userContext from "../utils/userContext";
 
 class Profile extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class Profile extends React.Component {
         location: "Dummy Location"
       }
     };
-    console.log(this.props.order + " - " + "Constructor is called");
+    console.log(this.props.name + " - " + "Constructor is called");
   }
 
   componentDidMount() {
@@ -60,6 +61,15 @@ class Profile extends React.Component {
         >
           Click
         </button>
+        <userContext.Consumer>
+          {({ user }) => (
+            <>
+              <p>{user.name}</p>
+              <p>{user.mail}</p>
+            </>
+          )}
+        </userContext.Consumer>
+        {/* <p></p> */}
         {/* <p>{this.state.count}</p>
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>
           Count

@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import userContext from "../utils/userContext";
 
 const Header = () => {
   const [authenticateUser, setAuthenticateUser] = useState(false);
   const status = useOnline();
+
+  const { user } = useContext(userContext);
 
   const NavItems = (
     <ul className="sm:flex flex-wrap block  ">
@@ -26,6 +29,11 @@ const Header = () => {
       </Link>
       <Link>
         <li className="m-2 p-1">{status ? "✅" : "📴"}</li>
+      </Link>
+      <Link>
+        <p>
+          {user.name} - {user.mail}
+        </p>
       </Link>
     </ul>
   );

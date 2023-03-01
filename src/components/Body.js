@@ -1,27 +1,32 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
 import Offline from "./Offline";
 import { DATA_FETCH_URL } from "../Config";
+import userContext from "../utils/userContext";
 
 const Body = () => {
   const [inputText, setInputText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([""]);
+  const { user, setUser } = useContext(userContext);
+
   useEffect(() => {
     getRestaurants();
   }, []);
+
   async function getRestaurants() {
     const data = await fetch(DATA_FETCH_URL);
     const json = await data.json();
-    setTimeout(() => {
-      // console.log(json);
-      setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-      setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    }, 3000);
+    // setTimeout(() => {
+    //   // console.log(json);
+    // }, 3000);
+    setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
+
   const status = useOnline();
   // console.log(status);
   //  Early return
@@ -42,14 +47,14 @@ const Body = () => {
       <div className="flex justify-center my-3">
         <input
           type="text"
-          className="bg-yellow-200 p-2"
+          className=" focus:outline-yellow-500 p-3"
           placeholder="Search"
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
 
         <button
-          className="mx-5 bg-yellow-400 text-black hover:bg-yellow-200 p-2 rounded-md"
+          className="mx-3 bg-yellow-400 text-black hover:bg-yellow-200 p-2 rounded-md"
           onClick={() => {
             const data = filterData(inputText, restaurants);
             setFilteredRestaurants(data);
@@ -57,8 +62,26 @@ const Body = () => {
         >
           Search
         </button>
+        <input
+          value={user.name}
+          onChange={(e) => {
+            setUser({
+              name: e.target.value,
+              mail: user.mail
+            });
+          }}
+        ></input>
+        <input
+          value={user.mail}
+          onChange={(e) => {
+            setUser({
+              name: user.name,
+              mail: e.target.value
+            });
+          }}
+        ></input>
       </div>
-
+      {/* {console.log(props.user)} */}
       <div className="flex flex-wrap justify-center">
         {filteredRestaurants.map((restaurant) => (
           <RestaurantCard {...restaurant.data} key={restaurant.data.id} />

@@ -1,6 +1,6 @@
 //jshint esversion: 6
 
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -14,16 +14,26 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
 // import Instamart from "./components/Instamart";
 
+import userContext from "./utils/userContext";
+
 //lazy loading
 const Instamart = lazy(() => import("./components/Instamart"));
 
-const AppLayout = () => (
-  <>
-    <Header />
-    <Outlet />
-    <Footer />
-  </>
-);
+const AppLayout = () => {
+  const [user, setUser] = useState({
+    name: "Rohan Chaudhary",
+    mail: "rohan@dev.com"
+  });
+  return (
+    <>
+      <userContext.Provider value={{ user: user, setUser: setUser }}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </userContext.Provider>
+    </>
+  );
+};
 
 const createRoute = createBrowserRouter([
   {
@@ -31,7 +41,10 @@ const createRoute = createBrowserRouter([
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
-      { path: "/", element: <Body /> },
+      {
+        path: "/",
+        element: <Body />
+      },
       {
         path: "/contact",
         element: <Contact />
