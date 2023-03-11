@@ -2,13 +2,15 @@ import { useContext, useState } from "react";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
-import userContext from "../utils/userContext";
+import { useSelector } from "react-redux";
+// import userContext from "../utils/userContext";
 
 const Header = () => {
   const [authenticateUser, setAuthenticateUser] = useState(false);
   const status = useOnline();
+  const cartItems = useSelector((store) => store?.cart?.items);
 
-  const { user } = useContext(userContext);
+  // const { user } = useContext(userContext);
 
   const NavItems = (
     <ul className="sm:flex flex-wrap block  ">
@@ -21,8 +23,8 @@ const Header = () => {
       <Link to="/contact">
         <li className="m-2 p-1">Contact Us</li>
       </Link>
-      <Link to="#">
-        <li className="m-2 p-1">Cart</li>
+      <Link to="/cart">
+        <li className="m-2 p-1">Cart - {cartItems.length}</li>
       </Link>
       <Link to="/instamart">
         <li className="m-2 p-1">Instamart</li>
@@ -30,11 +32,11 @@ const Header = () => {
       <Link>
         <li className="m-2 p-1">{status ? "✅" : "📴"}</li>
       </Link>
-      <Link>
+      {/* <Link>
         <p>
           {user.name} - {user.mail}
         </p>
-      </Link>
+      </Link> */}
     </ul>
   );
   return (

@@ -5,13 +5,13 @@ import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
 import Offline from "./Offline";
 import { DATA_FETCH_URL } from "../Config";
-import userContext from "../utils/userContext";
+// import userContext from "../utils/userContext";
 
 const Body = () => {
   const [inputText, setInputText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([""]);
-  const { user, setUser } = useContext(userContext);
+  // const { user, setUser } = useContext(userContext);
 
   useEffect(() => {
     getRestaurants();
@@ -62,7 +62,7 @@ const Body = () => {
         >
           Search
         </button>
-        <input
+        {/* <input
           value={user.name}
           onChange={(e) => {
             setUser({
@@ -79,7 +79,7 @@ const Body = () => {
               mail: e.target.value
             });
           }}
-        ></input>
+        ></input> */}
       </div>
       {/* {console.log(props.user)} */}
       <div className="flex flex-wrap justify-center">
