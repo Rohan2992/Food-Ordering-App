@@ -24,13 +24,17 @@ const Header = () => {
         <li className="m-2 p-1">Contact Us</li>
       </Link>
       <Link to="/cart">
-        <li className="m-2 p-1">Cart - {cartItems.length}</li>
+        <li className="m-2 p-1" data-testid="cartItems">
+          Cart - {cartItems.length}
+        </li>
       </Link>
       <Link to="/instamart">
         <li className="m-2 p-1">Instamart</li>
       </Link>
       <Link>
-        <li className="m-2 p-1">{status ? "✅" : "📴"}</li>
+        <li className="m-2 p-1" data-testid="online-status">
+          {status ? "✅" : "📴"}
+        </li>
       </Link>
       {/* <Link>
         <p>
@@ -42,7 +46,12 @@ const Header = () => {
   return (
     <div className="flex justify-between items-center flex-wrap sm:flex sm:justify-between sm:items-center p-3 bg-yellow-400">
       <a href="/">
-        <img className="w-20 h-20" src={logo} alt="Logo.png" />
+        <img
+          className="w-20 h-20"
+          src={logo}
+          alt="Logo.png"
+          data-testid="logo"
+        />
       </a>
       {NavItems}
       {authenticateUser ? (

@@ -51,6 +51,7 @@ const Body = () => {
           placeholder="Search"
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
+          data-testid="search-input"
         />
 
         <button
@@ -59,6 +60,7 @@ const Body = () => {
             const data = filterData(inputText, restaurants);
             setFilteredRestaurants(data);
           }}
+          data-testid="search-btn"
         >
           Search
         </button>
@@ -82,7 +84,10 @@ const Body = () => {
         ></input> */}
       </div>
       {/* {console.log(props.user)} */}
-      <div className="flex flex-wrap justify-center">
+      <div
+        className="flex flex-wrap justify-center"
+        data-testid="restaurant-list"
+      >
         {filteredRestaurants.map((restaurant) => (
           <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
         ))}

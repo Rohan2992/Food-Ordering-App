@@ -34,13 +34,14 @@ const RestaurantMenu = () => {
       </div>
       <div className="m-2">
         <h1 className="text-4xl font-extrabold p-3">Menu</h1>
-        <ul>
+        <ul data-testid="menu">
           {Object.values(restaurant?.menu?.items)?.map((item, i) => (
             <li key={i} className="flex justify-between m-3 p-3 bg-slate-200">
               {" - " + item?.name}
               <button
                 className="bg-yellow-300 p-1"
                 onClick={() => handleAddItem(item)}
+                data-testid="addBtn"
               >
                 Add Item
               </button>
